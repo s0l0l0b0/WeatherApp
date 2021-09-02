@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather</title>
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+        type="text/css"
+        />
+
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="POST">
+                <center>
+                    <input type="text" name="city" placeholder="Enter a City" required class="ghost-input">
+                    <input type="submit" id="submit" value="Get Weather" class="ghost-button">
+                </center>
+            </form>
+            <!-- ejs tamplate engine -->
+            <% if(weather !== null){%>
+            <p><%= weather %></p>
+            <%}%> <% if(error !== null){ %>
+            <p><%=error%></p>
+            <%}%>
+
+        </fieldset>
+    </div>
+</body>
+</html>
